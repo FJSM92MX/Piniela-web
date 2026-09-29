@@ -1,0 +1,122 @@
+/* Piniela · sitio puente (29-sep-2026). HTML y CSS simples, sin scripts de terceros. */
+:root {
+	--verde: #31b873;
+	--verde-oscuro: #185433;
+	--tinta: #1c2b22;
+	--gris: #5d6e64;
+	--fondo: #eef5f1;
+	--tarjeta: #ffffff;
+	--linea: #dce8e1;
+	--suave: #f1f9f5;
+	color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+	margin: 0;
+	background: var(--fondo);
+	color: var(--tinta);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	overflow-wrap: break-word;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--verde-oscuro); }
+a:hover { color: var(--tinta); }
+
+/* Barra superior */
+.barra {
+	background: var(--tarjeta);
+	border-bottom: 1px solid var(--linea);
+	padding: 14px 16px;
+	text-align: center;
+}
+.barra img { height: 30px; width: auto; vertical-align: middle; }
+.barra a { display: inline-block; }
+
+/* Contenedores */
+.envoltura { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+.envoltura.angosta { max-width: 560px; }
+.tarjeta {
+	background: var(--tarjeta);
+	border-radius: 18px;
+	padding: 28px 22px;
+	box-shadow: 0 10px 30px rgba(24, 84, 51, 0.08);
+}
+
+/* Texto de páginas legales y de contenido */
+.contenido h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 12px; color: var(--tinta); }
+.contenido h2 { font-size: 1.3rem; line-height: 1.3; margin: 28px 0 10px; color: var(--verde-oscuro); }
+.contenido h3 { font-size: 1.1rem; line-height: 1.35; margin: 22px 0 8px; }
+.contenido h4, .contenido h5, .contenido h6 { font-size: 1rem; margin: 18px 0 6px; }
+.contenido p, .contenido ul, .contenido ol { margin: 0 0 12px; }
+.contenido ul, .contenido ol { padding-left: 22px; }
+.contenido li { margin-bottom: 6px; }
+.contenido table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 0.95rem; display: block; overflow-x: auto; }
+.contenido th, .contenido td { border: 1px solid var(--linea); padding: 6px 8px; text-align: left; vertical-align: top; }
+.contenido hr { border: 0; border-top: 1px solid var(--linea); margin: 24px 0; }
+.contenido .cifra { font-size: 2rem; font-weight: 700; color: var(--verde-oscuro); margin: 18px 0 0; line-height: 1.1; }
+.contenido .boton { margin: 8px 0 16px; }
+
+/* Botones */
+.boton {
+	display: inline-block;
+	background: var(--verde-oscuro);
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 12px 20px;
+	border-radius: 999px;
+	line-height: 1.2;
+}
+.boton:hover { background: var(--tinta); color: #ffffff; }
+.boton.claro { background: var(--suave); color: var(--verde-oscuro); border: 1px solid var(--verde); }
+.boton.claro:hover { background: #e2f3ea; color: var(--tinta); }
+.tiendas { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 18px 0 8px; }
+.tiendas .boton { min-width: 210px; text-align: center; }
+.tiendas .boton small { display: block; font-weight: 400; font-size: 0.75rem; opacity: 0.85; }
+
+/* Portada */
+.portada { text-align: center; }
+.portada h1 { font-size: 2rem; line-height: 1.15; margin: 8px 0 12px; }
+.portada .bajada { font-size: 1.1rem; color: var(--gris); margin: 0 auto 8px; max-width: 34em; }
+.pasos { list-style: none; padding: 0; margin: 28px 0 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; text-align: left; }
+.pasos li { background: var(--suave); border: 1px solid var(--linea); border-radius: 14px; padding: 14px 16px; margin: 0; }
+.pasos strong { display: block; color: var(--verde-oscuro); }
+.bloque { margin-top: 28px; text-align: left; }
+.bloque h2 { font-size: 1.25rem; margin: 0 0 6px; color: var(--verde-oscuro); }
+.bloque p { margin: 0 0 10px; }
+.nota { font-size: 0.9rem; color: var(--gris); }
+
+/* Invitación (/join) */
+.invitacion { text-align: center; }
+.invitacion .icono { width: 72px; height: 72px; margin: 0 auto 14px; display: block; }
+.invitacion h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 10px; }
+.estado { display: inline-block; font-weight: 600; font-size: 0.85rem; padding: 5px 14px; border-radius: 999px; margin: 0 0 14px; }
+.estado.privada { background: #fff3e0; color: #7a5000; }
+.estado.publica { background: #e7f7ee; color: #1b6a3e; }
+.caja-pin { background: var(--suave); border: 1px dashed var(--verde); border-radius: 14px; padding: 12px 16px; margin: 0 auto 18px; max-width: 320px; color: var(--gris); }
+.caja-pin .pin { display: block; font-weight: 700; font-size: 2rem; letter-spacing: 0.18em; color: var(--verde-oscuro); margin-top: 2px; }
+.descarga { border-top: 1px solid var(--linea); padding-top: 18px; margin-top: 6px; }
+.opciones { text-align: left; margin-top: 24px; border-top: 1px solid var(--linea); padding-top: 20px; }
+.opciones h2 { font-size: 1.15rem; text-align: center; margin: 0 0 12px; }
+.opciones h3 { font-size: 1rem; color: var(--verde-oscuro); margin: 14px 0 6px; }
+.opciones ul { margin: 0; padding-left: 20px; }
+.opciones li { margin-bottom: 6px; }
+
+/* Pie */
+.pie { text-align: center; font-size: 0.9rem; color: var(--gris); padding: 8px 16px 32px; }
+.pie nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-bottom: 10px; }
+.pie a { color: var(--verde-oscuro); text-decoration: none; font-weight: 600; }
+.pie a:hover { text-decoration: underline; }
+
+[hidden] { display: none !important; }
+
+@media (max-width: 480px) {
+	.portada h1 { font-size: 1.6rem; }
+	.contenido h1, .invitacion h1 { font-size: 1.45rem; }
+	.tarjeta { padding: 22px 16px; border-radius: 14px; }
+	.tiendas .boton { width: 100%; }
+}
