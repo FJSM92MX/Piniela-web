@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://piniela.com/sitemap.xml
+Sitemap: https://piniela.com/sitemap_index.xml
