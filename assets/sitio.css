@@ -266,6 +266,10 @@ figcaption { font-size: 13px; color: #888; text-align: center; margin-top: 6px; 
 .relacionadas h3 { padding-bottom: 20px; }
 .relacionadas .tarjeta { border: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 18px rgba(0, 0, 0, 0.3); }
 .relacionadas .tarjeta-imagen { border-radius: 16px 16px 0 0; }
+/* Barra lateral de las notas: panel aparte para que no se confunda con el texto (Paco, 9-oct-2026) */
+.entrada-cuerpo aside.destacadas { background: #e9f6ee; border: 1px solid #cdeedb; border-radius: 20px; padding: 20px 18px 24px; }
+.entrada-cuerpo aside.destacadas::before { content: "M\00E1s notas del blog"; display: block; font-family: var(--karla); font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--verde-oscuro); padding-bottom: 12px; margin-bottom: 18px; border-bottom: 1px solid #cdeedb; }
+.entrada-cuerpo aside.destacadas .lista { gap: 24px; }
 
 /* ---------- Bloque verde «Descarga Piniela» (pie de entradas) ---------- */
 .descarga { background-color: var(--verde-oscuro); background-position: center top; background-size: cover; margin-top: 8vw; padding: 4% 0 24px; color: #fff; }
